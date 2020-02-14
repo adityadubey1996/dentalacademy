@@ -54,46 +54,57 @@
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-instagram"></i></a></li>
           </ul>
         </div>
-        <div class="col-lg-8 text-center text-lg-right">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="research.html">research</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">SCHOLARSHIP</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">login</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">register</a></li>
-          </ul>
-        </div>
+        
       </div>
     </div>
   </div>
   <!-- navbar -->
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light p-0">
+  <div class="navigation w-100" style="
+  height: 55px;
+">
+    <div class="container" style="
+    height: inherit;
+">
+      <nav class="navbar navbar-expand-lg navbar-light p-0" style="
+      height: inherit;
+  ">
         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item @@home">
+        <div class="collapse navbar-collapse" style="
+        height: inherit;" id="navigation">
+          <ul class="navbar-nav ml-auto text-center" style="
+          height: inherit;
+      ">
+      <style>
+        .nav-item::before{
+          bottom:-8px;
+        }
+      </style>
+            <li class="nav-item " style="
+            top:-17px;">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item @@about">
+            <li class="nav-item @@about" style="
+            top:-17px;">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item @@courses">
+            <li class="nav-item @@courses" style="
+            top:-17px;">
               <a class="nav-link" href="courses.html">COURSES</a>
             </li>
-            <li class="nav-item @@events">
+            <li class="nav-item @@events active" style="
+            top:-17px;">
               <a class="nav-link" href="teacher.html">TEAM</a>
             </li>
-            <li class="nav-item @@blog">
-              <a class="nav-link" href="contact.html">Contact-us</a>
-            </li>
-           
+            
+            
+            <li class="nav-item @@contact" style="
+            top:-17px;">
+              <a class="nav-link" href="contact.html">CONTACT-US</a>
             </li>
           </ul>
         </div>
@@ -378,7 +389,7 @@
         <div class="row">
           <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
             <h3 class="text-white">CONTACT</h3>
-            <form class="form-horizontal" role="form" >
+            <form class="form-horizontal" action="/contact_us" method="POST" role="form" >
          
               <div class="form-group">
                 <div class="col-sm-12">

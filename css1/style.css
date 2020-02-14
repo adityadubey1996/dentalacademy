@@ -1,0 +1,99 @@
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height:800px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+  } 
+
+  .btn-primary{
+    background: #41a42e;
+  }
+
+  .btn-primary:hover{
+    color:#41a42e;
+    background-color: #41a42e;
+  }
+  body > header > div.navigation.w-100 > div > nav > a > img{
+    height: 110px;
+  }
+  .navbar-nav{
+    background: #41a42e;
+    height: inherit;
+        width:35%;
+        padding-left: 30px;
+  }
+  .navigation{
+    background-image: linear-gradient(to right, transparent 68%, #41a42e 50%);
+  }
+
+  .newsletter{
+    background-image: linear-gradient(to right, transparent 50%, #41a42e 50%);
+  }
+  .bg-primary {
+  background: #41a42e !important;
+  }
+
+  .copyright{
+    margin-top: 0px;
+  }
+
+  @media(max-width: 1199px){
+    body > header > div.navigation.w-100 > div > nav > a > img{
+      height: 60px;
+    }
+    .navbar-nav{
+      background: transparent;
+      width:45%;
+    }
+    .navigation{
+    background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
+  }
+}
+
+@media(max-width: 985px){
+  body > header > div.navigation.w-100 > div > nav > a > img{
+      
+      position: absolute;
+  top: -3px;
+  height: 61px;
+    }
+    .navbar-nav{
+      background: transparent;
+      width:45%;
+    }
+    .navigation{
+    background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
+  }
+}
+@media (max-width: 760px){
+  body > header > div.navigation.w-100 > div > nav > a > img{
+      height: 60px;
+    }
+    .navbar-nav{
+      background: transparent;
+      width:45%;
+    }
+    .navigation{
+    background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
+  }
+
+}
+@media (max-width: 570px){
+  body > header > div.navigation.w-100 > div > nav > a > img{
+      height: 60px;
+    }
+    .navbar-nav{
+      background: transparent;
+      width:45%;
+    }
+    .navigation{
+    background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
+  }
+}

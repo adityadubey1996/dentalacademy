@@ -29,7 +29,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
+  <link rel="stylesheet" href="./css1/style.css">
 </head>
 
 <body>
@@ -59,35 +59,48 @@
     </div>
   </div>
   <!-- navbar -->
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+  <div class="navigation w-100" style="
+  height: 55px;
+">
+    <div class="container" style="
+    height: inherit;
+">
+      <nav class="navbar navbar-expand-lg navbar-light p-0" style="
+      height: inherit;
+  ">
+        <a class="navbar-brand" href="index.html"><img src="images/Logo 1.svg" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item @@home">
+        <div class="collapse navbar-collapse" style="
+        height: inherit; z-index: 10;" id="navigation">
+          <ul class="navbar-nav ml-auto" id="navigation"> 
+      <style>
+        .nav-item::before{
+          bottom:-8px;
+        }
+      </style>
+            <li class="nav-item " style="
+            top:-17px;">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item @@about">
+            <li class="nav-item @@about" style="
+            top:-17px;">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item @@courses">
+            <li class="nav-item @@courses " style="
+            top:-17px;">
               <a class="nav-link" href="courses.html">COURSES</a>
             </li>
-            <li class="nav-item @@events">
-              <a class="nav-link" href="teacher.html">TEAM</a>
+            
+            
+            
+            <li class="nav-item @@contact active" style="
+            top:-17px;">
+              <a class="nav-link" href="contact.html" style="width: 130%;">CONTACT</a>
             </li>
-            
-            
-            <li class="nav-item @@contact">
-              <a class="nav-link" href="contact.html">CONTACT-US</a>
-            </li>
-            
           </ul>
         </div>
       </nav>

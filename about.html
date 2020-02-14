@@ -29,7 +29,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
+  <link rel="stylesheet" href="./css1/style.css">
 </head>
 
 <body>
@@ -59,35 +59,48 @@
     </div>
   </div>
   <!-- navbar -->
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+  <div class="navigation w-100" style="
+  height: 55px;
+">
+    <div class="container" style="
+    height: inherit;
+">
+      <nav class="navbar navbar-expand-lg navbar-light p-0" style="
+      height: inherit;
+  ">
+        <a class="navbar-brand" href="index.html"><img src="images/Logo 1.svg" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item @@home">
+        <div class="collapse navbar-collapse" style="
+        height: inherit; z-index: 10;" id="navigation">
+          <ul class="navbar-nav ml-auto" id="navigation"> 
+      <style>
+        .nav-item::before{
+          bottom:-8px;
+        }
+      </style>
+            <li class="nav-item active" style="
+            top:-17px;">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item @@about" style="
+            top:-17px;">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item @@courses">
+            <li class="nav-item @@courses" style="
+            top:-17px;">
               <a class="nav-link" href="courses.html">COURSES</a>
             </li>
-            <li class="nav-item @@events">
-              <a class="nav-link" href="teacher.html">TEAM</a>
-            </li>
             
             
-            <li class="nav-item @@contact">
-              <a class="nav-link" href="contact.html">CONTACT-US</a>
+            
+            <li class="nav-item @@contact" style="
+            top:-17px;">
+              <a class="nav-link" href="contact.html" style="width: 130%;">CONTACT</a>
             </li>
-           
           </ul>
         </div>
       </nav>
@@ -107,33 +120,23 @@
             </div>
             <div class="modal-body">
                 <div class="login">
-                  <form action="/action_page.php" style="border:1px solid #ccc"> 
-                    <div class="container"> 
-                        <label><b>Name</b></label> 
-                        <input type="text" placeholder="Enter name" name="name" required> 
-                         
-                        <label><b>Phone No.</b></label> 
-                        <input type="text" placeholder="Enter number" name="phone" required> 
-            
-                        <label><b>Email</b></label> 
-                        <input type="text" placeholder="Enter Email" name="email" required> 
-              
-                        <label><b>Qualification</b></label> 
-                        <input type="password"  name="qualifi" required> 
-              
-                        <label><b>Additional info</b></label> <br>
-                
-                        <textarea rows="4" cols="180" ></textarea>
-                       
-                        <p>To create an account you have to agree our <a href="#">Terms & Privacy</a>.</p> 
-              
-                        <div class="clearfix"> 
-                            <button type="button" class="cancelbtn">Cancel</button> 
-                            <button type="submit" class="signupbtn">Sign Up</button> 
-                        </div> 
-                    </div> 
-                </form> 
-              
+                    <form action="#" class="row">
+                        <div class="col-12">
+                            <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Phone">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Name">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Password">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">SIGN UP</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -178,7 +181,7 @@
           <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">About Us</a></li>
           <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
         </ul>
-        <p class="text-lighten">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
+        <p class="text-lighten">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others..</p>
       </div>
     </div>
   </div>
@@ -191,9 +194,16 @@
     <div class="row">
       <div class="col-12">
         <img class="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image">
-        <h2 class="section-title">ABOUT OUR JOURNY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
-        <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
+        <h2 class="section-title">Welcome to Dental Connect</h2>
+        <p>We are group of Doctors who are associated together to bring in the best of clinical practice nearer to our patients at the best and affordable price. We partner with the best to dentists to ensure we provide the quality care across our centers..</p>
+        <p>We understand the importance of the oral-systemic connection and aim to share knowledge with our patients on how a healthy mouth can positively impact the well-being of the entire body. Our mission is to provide effective, and state of the art dental treatment in a welcoming and relaxing environment. We pride ourselves on focusing on prevention, as it is the key to our overall health. We are passionate about dentistry and our energy and positive spirit shine through in our actions and words.</p>
+        <p>The Team of Doctors at Dental Connect has vast experience and are experts in their respective fields. We implement only research and clinical based techniques and have developed and perfected a system of care that provides long lasting, beautiful results.
+
+         <p>We proudly provide comprehensive quality dental care to the society. Our featured services include preventative and restorative (fillings, crowns) treatment, Dental Implants, removable (partials, dentures) appliances, TMJ Dysfunction, Invisalign, and much more.</p>
+          
+          <p>For us patients come first and we strive to provide them the best of dental care at affordable price.</p>
+          
+         <p> School Dental Programme: The School Dental Service provides dental services in school dental clinics and mobile dental clinics for Primary and Secondary pupils to promote good oral health .</p>
       </div>
     </div>
   </div>
@@ -207,28 +217,28 @@
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="60">0</h2>
+          <h2 class="count text-white" data-count="15">0</h2>
           <h5 class="text-white">TEACHERS</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="50">0</h2>
+          <h2 class="count text-white" data-count="10">0</h2>
           <h5 class="text-white">COURSES</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
+          <h2 class="count text-white" data-count="450">0</h2>
           <h5 class="text-white">STUDENTS</h5>
         </div>
       </div>
       <!-- funfacts item -->
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
-          <h2 class="count text-white" data-count="3737">0</h2>
+          <h2 class="count text-white" data-count="2353">0</h2>
           <h5 class="text-white">SATISFIED CLIENT</h5>
         </div>
       </div>
@@ -237,26 +247,7 @@
 </section>
 <!-- /funfacts -->
 
-<!-- success story -->
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-sm-4 position-relative success-video">
-        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-          <i class="ti-control-play"></i>
-        </a>
-      </div>
-      <div class="col-lg-6 col-sm-8">
-        <div class="bg-white p-5">
-          <h2 class="section-title">Success Stories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /success story -->
+
 
 <!-- teachers -->
 <section class="section">
@@ -271,7 +262,7 @@
             <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
             <div class="card-body">
               <a href="teacher-single.html">
-                <h4 class="card-title">Jacke Masito</h4>
+                <h4 class="card-title">Dr.Salil Choudhary</h4>
               </a>
               <div class="d-flex justify-content-between">
                 <span>Teacher</span>
@@ -291,7 +282,7 @@
             <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
             <div class="card-body">
               <a href="teacher-single.html">
-                <h4 class="card-title">Clark Malik</h4>
+                <h4 class="card-title">Dr.Saloni Choudhary</h4>
               </a>
               <div class="d-flex justify-content-between">
                 <span>Teacher</span>
@@ -311,7 +302,7 @@
             <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
             <div class="card-body">
               <a href="teacher-single.html">
-                <h4 class="card-title">John Doe</h4>
+                <h4 class="card-title">Dr.Anshri Prasad</h4>
               </a>
               <div class="d-flex justify-content-between">
                 <span>Teacher</span>
@@ -333,47 +324,46 @@
 <!-- footer -->
 <footer>
   <!-- newsletter -->
-    <!-- newsletter -->
-    <div class="newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
-            <h3 class="text-white">CONTACT</h3>
-            <form class="form-horizontal" role="form" >
-         
-              <div class="form-group">
-                <div class="col-sm-12">
-                  <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
-                </div>
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+          <h3 class="text-white">CONTACT US</h3>
+          <form class="form-horizontal" action="/contact_us" method="POST" role="form" >
+       
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
               </div>
-  
-              <div class="form-group">
-                <div class="col-sm-12">
-                  <input type="text" class="form-control" id="phone" placeholder="MOBILE NUMBER" name="phone" value="">
-                </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="number" class="form-control" id="phone" placeholder="MOBILE NUMBER" name="phone" value="">
               </div>
-        
-        
-              <div class="form-group">
-                <div class="col-sm-12">
-                  <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
-                </div>
+            </div>
+      
+      
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
               </div>
-        
-              <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
-              
-              <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                <div class="button">
-                  <i class="fa fa-paper-plane"></i><span class="send-text" style="font-size: 20px;">SEND</span>
-                </div>
-              
-              </button>
-              
-            </form>
-          </div>
+            </div>
+      
+            <textarea class="form-control" rows="1" placeholder="MESSAGE" name="message"></textarea>
+            
+            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+              <div class="button">
+                <i class="fa fa-paper-plane"></i><span class="send-text" style="font-size: 20px;">SEND</span>
+              </div>
+            
+            </button>
+            
+          </form>
         </div>
       </div>
     </div>
+  </div>
   <!-- footer content -->
   <div class="footer bg-footer section border-bottom">
     <div class="container">
@@ -408,7 +398,18 @@
             <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
           </ul>
         </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SUPPORT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Language</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
+          </ul>
+        </div>
       
+        
       </div>
     </div>
   </div>
@@ -417,12 +418,12 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-7 text-sm-left text-center">
-          <p class="mb-0">Copyright
+          <p class="mb-0">
             <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
             </script> 
-            © themefisher</p>
+           </p>
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
