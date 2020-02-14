@@ -54,40 +54,68 @@
 </head>
 
 <body>
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="justify-content-end" id="exampleModalLabel"></h4>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Name</label>
-              <input type="text" class="form-control" id="recipient-name" required>
-            </div>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Email</label>
-              <input type="email" class="form-control" id="recipient-name" required>
-            </div>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Password</label>
-              <input type="password" class="form-control" id="recipient-name" name="psw" required>
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="control-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
+  <form>
+  
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="justify-content-center" id="exampleModalLabel">Booking Form</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            
+          </div>
+          <div class="modal-body">
+            <form action="/thankyou" method="POST">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Name</label>
+                <input type="text" class="form-control" id="recipient-name" required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Email</label>
+                <input type="email" class="form-control" id="recipient-name" required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Phone Number</label>
+                <input type="number" class="form-control" id="recipient-name" name="phone_number" required>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Qualification</label>
+                <input type="text" class="form-control" id="recipient-name" required>
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        console.log('hi')
+        if(sessionStorage.getItem("#myModal") !=='true')
+        {
+         
+          $("#myModal").modal("show");
+          console.log('hi')
+          sessionStorage.setItem('#myModal' ,'true');
+  
+  }
+});
+  
+  
+    </Script>
+    </form>
   <!-- preloader start -->
   <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
@@ -183,72 +211,14 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="login">
-                  <form action="/action_page.php" style="border:1px solid #ccc"> 
-                    <div class="container"> 
-                        <label><b>Name</b></label> 
-                        <input type="text" placeholder="Enter name" name="name" required> 
-                         
-                        <label><b>Phone No.</b></label> 
-                        <input type="text" placeholder="Enter number" name="phone" required> 
             
-                        <label><b>Email</b></label> 
-                        <input type="text" placeholder="Enter Email" name="email" required> 
-              
-                        <label><b>Qualification</b></label> 
-                        <input type="password"  name="qualifi" required> 
-              
-                        <label><b>Additional info</b></label> <br>
-                
-                        <textarea rows="4" cols="180" ></textarea>
-                       
-                        <p>To create an account you have to agree our <a href="#">Terms & Privacy</a>.</p> 
-              
-                        <div class="clearfix"> 
-                            <button type="button" class="cancelbtn">Cancel</button> 
-                            <button type="submit" class="signupbtn">Sign Up</button> 
-                        </div> 
-                    </div> 
-                </form> 
-              
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content rounded-0 border-0 p-4">
-            <div class="modal-header border-0">
-                <h3>Login</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="#" class="row">
-                    <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone">
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name">
-                    </div>
-                    <div class="col-12">
-                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Password">
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">LOGIN</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- hero slider -->
-<section class="hero-section overlay bg-cover" data-background="images/2020-02-13.png">
+<section class="hero-section overlay bg-cover" data-background="images/Landing-Page_4.jpg">
   <div class="container">
     <div class="hero-slider">
       <!-- slider item -->
@@ -256,11 +226,8 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+            
+            <a href="courses.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
           </div>
         </div>
       </div>
@@ -268,12 +235,9 @@
       <div class="hero-slider-item">
         <div class="row">
           <div class="col-md-8">
-            <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
+            <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Join With Us now for highly Personalized Comprehensive Clinical Courses</h1>
+            
+            <a href="courses.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
           </div>
         </div>
       </div>
@@ -281,12 +245,9 @@
       <div class="hero-slider-item">
         <div class="row">
           <div class="col-md-8">
-            <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
+            <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Organized and Structural Educational Programme.  Job Oriented Courses</h1>
+            
+            <a href="courses.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
           </div>
         </div>
       </div>
@@ -298,63 +259,7 @@
 
 <!-- /banner-feature -->
 <style>
-  .slide-style{
-    width: 300px;
-    margin-right:10px;
-  }
-  .swiper-container1{
-    width:3%;
-  }
-  .about_us{
-    height: 715px;
-  }
-  .our_courses{
-    margin-left: 120px;
-  }
-  @media(max-width: 1199px){
-    .upcoming_courses{
-      padding-top: 0px;
-    }
-    .upcoming_courses_div{
-      padding-top:0px;
-      padding-bottom:45px;
-    }
-    .our_courses{
-      margin-left:60px ;
-    }
-    .about_us{
-      height: 760px;
-    }
-  }
-
-  @media(max-width: 985px){
-    .upcoming_courses_div{
-      padding-bottom: 125px;
-    }
-  }
-  @media (max-width: 760px){
-    .about_us{
-      height:1100px;
-    }
-    .upcoming_courses{
-      padding-top: 40px;
-      
-      
-    }
-    .our_courses{
-      margin-left:95px ;
-    }
-
-  }
-  @media (max-width: 570px){
-    .about_us{
-      height:1150px;
-    }
-    .our_courses{
-      margin-left: 0px;
-      
-    }
-  }
+ 
 </style>
 <!-- about us -->
 <section class="section about_us">
@@ -370,15 +275,13 @@
       </div>
       <br>
       <br>
-      <div class="col-md-6 order-2 order-md-2 mb-4 mb-md-0 upcoming_courses_div" style="
-      bottom: 5px;
-  ">
+      <div class="col-md-6 order-2 order-md-2 mb-4 mb-md-0 upcoming_courses_div">
         <h2 class="section-title upcoming_courses">Upcoming Courses</h2>
         <div class="swiper-container1">
           <div class="swiper-wrapper">
             <div class="swiper-slide slide-style" style="width: 300px;margin-right: 10px;">
               <div class="card p-0 border-primary rounded-0 hover-shadow" style="width: 300px;">
-                <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb">
+                <img class="card-img-top rounded-0" src="images/zahnreinigung-1514692_1920.jpg" style="height: 222px;"alt="course thumb">
                 <div class="card-body">
                   <ul class="list-inline mb-2">
                     <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>Course duration:<strong> 8 contact days over 1 month.</strong> </li>
@@ -390,7 +293,7 @@
                   <p class="card-text mb-4"> 
                     ● Clinical Cases (Live Surgery)<br>
                     ● Exdontia, Minor Oral Surgery and Emergencies</p>
-                  <a href="course-single1.html" class="btn btn-primary btn-sm">Apply now</a>
+                  <a href="course-single1.html" class="btn btn-primary btn-sm" >Apply now</a>
                 </div>
               </div>
             </div>
@@ -398,7 +301,7 @@
             <!-- course item -->
               <div class="swiper-slide slide-style"style="width: 300px;margin-right: 10px;">
               <div class="card p-0 border-primary rounded-0 hover-shadow"  style="width: 300px;">
-                <img class="card-img-top rounded-0" src="images/courses/course-2.jpg" alt="course thumb">
+                <img class="card-img-top rounded-0" src="images/umanoide-KeVKEs1_RDU-unsplash.jpg" alt="course thumb">
                 <div class="card-body">
                   <ul class="list-inline mb-2">
                     <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>Course duration:</li>
@@ -459,7 +362,7 @@
           ● Exdontia, Minor Oral Surgery and Emergencies</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single1.html" class="btn btn-primary btn-sm">Know More</a>
@@ -491,7 +394,7 @@
           ● Laser Applications</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single2.html" class="btn btn-primary btn-sm">Know More</a>
@@ -522,7 +425,7 @@
           </p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single3.html" class="btn btn-primary btn-sm">Know More</a>
@@ -550,7 +453,7 @@
         <p class="card-text mb-4"> EXTENSIVE PROGRAM IN ENDODONTICS INCLUDING MULTIPLE PATIENTS</p>
         <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single4.html" class="btn btn-primary btn-sm">Know More</a>
@@ -581,7 +484,7 @@
           • Manage complications</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single5.html" class="btn btn-primary btn-sm">Know More</a>
@@ -609,7 +512,7 @@
           Designed to expand the participant’s knowledge and confidence in Dental practice in following areas</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single6.html" class="btn btn-primary btn-sm">Know More</a>
@@ -643,7 +546,7 @@
          </p>
          <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single7.html" class="btn btn-primary btn-sm">Know More</a>
@@ -671,7 +574,7 @@
           ● To optimize usage of Prosthetic options of the particular company
          <div class="row">
            <div class="col-sm-6" style="width: 50%;">
-            <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+            <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
            </div>
            <div class="col-sm-6" style="width: 50%;">
             <a href="course-single8.html" class="btn btn-primary btn-sm">Know More</a>
@@ -700,7 +603,7 @@
         <p class="card-text mb-4"> Designed for General Practioners who have decided to incorporate endodontic in their treatment offering.</p>
         <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single9.html" class="btn btn-primary btn-sm">Know More</a>
@@ -734,69 +637,7 @@
 <!-- /events -->
 
 <!-- teachers -->
-<section class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h2 class="section-title">Our Teachers</h2>
-      </div>
-      <!-- teacher -->
-      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-          <div class="card-body">
-            <a href="teacher-single.html">
-              <h4 class="card-title">Jacke Masito</h4>
-            </a>
-            <p>Teacher</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- teacher -->
-      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
-          <div class="card-body">
-            <a href="teacher-single.html">
-              <h4 class="card-title">Clark Malik</h4>
-            </a>
-            <p>Teacher</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- teacher -->
-      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
-          <div class="card-body">
-            <a href="teacher-single.html">
-              <h4 class="card-title">John Doe</h4>
-            </a>
-            <p>Teacher</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- /teachers -->
 
 <!-- blog -->
@@ -806,58 +647,17 @@
 <!-- footer -->
 <footer>
   <!-- newsletter -->
-  <div class="newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
-          <h3 class="text-white">CONTACT US</h3>
-          <form class="form-horizontal" action="/contact_us" method="POST" role="form" >
-       
-            <div class="form-group">
-              <div class="col-sm-12">
-                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-sm-12">
-                <input type="number" class="form-control" id="phone" placeholder="MOBILE NUMBER" name="phone" value="">
-              </div>
-            </div>
-      
-      
-            <div class="form-group">
-              <div class="col-sm-12">
-                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
-              </div>
-            </div>
-      
-            <textarea class="form-control" rows="1" placeholder="MESSAGE" name="message"></textarea>
-            
-            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-              <div class="button">
-                <i class="fa fa-paper-plane"></i><span class="send-text" style="font-size: 20px;">SEND</span>
-              </div>
-            
-            </button>
-            
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- footer content -->
-  <div class="footer bg-footer section border-bottom">
+  <div class="footer bg-footer section border-bottom" style="padding-top: 10px;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/Logo 1.svg" style="height: 100px;" alt="logo"></a>
           <ul class="list-unstyled">
-            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">contact@yourdomain.com</li>
+            <li class="mb-2">#222, 2nd Floor , Maruthi Complex T.C.Palya Main Road, Hoyasala Nagar</li>
+            <li class="mb-2">+91 </li>
+           
+            <li class="mb-2">dentalconnectacademy@gmail.com</li>
           </ul>
         </div>
         <!-- company -->
@@ -870,8 +670,18 @@
             
           </ul>
         </div>
+        <style>
+          iframe{
+            opacity: 0.3;
+          }
+          iframe:hover{
+            opacity: 1;
+          }
+        </style>
         <!-- links -->
-        
+        <div class="col-lg-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.672643924644!2d77.66530490789012!3d13.013670133087436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1127fca5dc63%3A0xeb44854b6076b9d3!2sMaruthi%20Complex!5e0!3m2!1sen!2sin!4v1581685663589!5m2!1sen!2sin"  width="500" height="300" frameborder="0" style="border:0; padding-top:30px;" allowfullscreen=""></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -881,11 +691,13 @@
       <div class="row">
         <div class="col-sm-7 text-sm-left text-center">
           <p class="mb-0">Copyright
+            
+          
             <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
             </script> 
-            © copyright Tedroox Technologies pvt.ltd</p>
+            © copyright <a href="http://tedroox.com/" style=" font-size: 16px;"> Tedroo<span style="color: rgb(223, 129, 52);">X</span> Technologies.</a></p>
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
@@ -898,6 +710,7 @@
       </div>
     </div>
   </div>
+</footer>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>

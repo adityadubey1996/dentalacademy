@@ -16,6 +16,8 @@
     background: #41a42e;
   }
 
+
+  
   .btn-primary:hover{
     color:#41a42e;
     background-color: #41a42e;
@@ -51,6 +53,7 @@
     .navbar-nav{
       background: transparent;
       width:45%;
+      padding-top: 17px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -67,6 +70,7 @@
     .navbar-nav{
       background: transparent;
       width:45%;
+      padding-top: 17px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -79,6 +83,7 @@
     .navbar-nav{
       background: transparent;
       width:45%;
+      padding-top: 17px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -92,8 +97,90 @@
     .navbar-nav{
       background: transparent;
       width:45%;
+      padding-top: 17px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
   }
+}
+
+.slide-style{
+  width: 300px;
+  margin-right:10px;
+}
+.swiper-container1{
+  width:3%;
+}
+.about_us{
+  height: 715px;
+}
+.our_courses{
+  margin-left: 120px;
+}
+
+.upcoming_courses_div{
+  bottom: 71px;
+}
+@media(max-width: 1199px){
+  .upcoming_courses{
+    padding-top: 0px;
+  }
+  .upcoming_courses_div{
+    padding-top:0px;
+    padding-bottom:45px;
+  }
+  .our_courses{
+    margin-left:60px ;
+  }
+  .about_us{
+    height: 760px;
+  }
+}
+
+@media(max-width: 985px){
+  .upcoming_courses_div{
+    padding-bottom: 125px;
+  }
+}
+@media (max-width: 760px){
+  .about_us{
+    height:1100px;
+  }
+  .upcoming_courses{
+    padding-top: 40px;
+    
+    
+  }
+  .our_courses{
+    margin-left:95px ;
+  }
+
+}
+@media (max-width: 570px){
+  .about_us{
+    height:1150px;
+  }
+  .our_courses{
+    margin-left: 0px;
+    
+  }
+}
+
+.btn-primary-outline{
+   color: #ffffff; 
+    background-color: #41a42e; 
+    border: none;
+}
+.btn-primary-outline:hover{
+  background: #41a42e;
+  color: #41a42e;
+}
+
+.mb-5, .my-5{
+  margin-bottom:3rem !important;
+  margin-top: 1rem;
+}
+
+body > section.page-title-section.overlay > div > div > div > ul > li:nth-child(1) > a{
+  color:#41a42e !important; 
 }
