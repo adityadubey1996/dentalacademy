@@ -46,7 +46,7 @@
 
 </script>
 
-<link rel="stylesheet" href="./css1/style.css">
+
 <style>
    
 </style>
@@ -121,8 +121,13 @@
     <img src="images/preloader.gif" alt="preloader">
   </div>
   <!-- preloader end -->
-
+  <link rel="stylesheet" href="./css1/style.css">
 <!-- header -->
+
+<style>
+  
+</style>
+<div class="container main_container" id="main_container">
 <header class="fixed-top header">
   <!-- top header -->
   <div class="top-header py-2 bg-white">
@@ -141,7 +146,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
   <!-- navbar -->
 
   <style>
@@ -171,28 +176,22 @@
         height: inherit; z-index: 10;" id="navigation">
           <ul class="navbar-nav ml-auto" id="navigation"> 
       <style>
-        .nav-item::before{
-          bottom:-8px;
-        }
+        
       </style>
-            <li class="nav-item active" style="
-            top:-17px;">
+            <li class="nav-item nav-item1 active" >
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item @@about" style="
-            top:-17px;">
+            <li class="nav-item nav-item1 @@about" >
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item @@courses" style="
-            top:-17px;">
+            <li class="nav-item  nav-item1 @@courses" >
               <a class="nav-link" href="courses.html">COURSES</a>
             </li>
             
             
             
-            <li class="nav-item @@contact" style="
-            top:-17px;">
-              <a class="nav-link" href="contact.html" style="width: 130%;">CONTACT</a>
+            <li class="nav-item nav-item1 @@contact" >
+              <a class="nav-link " href="contact.html">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -265,7 +264,7 @@
 <section class="section about_us">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 order-1 order-md-1">
+      <div class="col-xl-6 order-1 order-md-1">
         <h2 class="section-title">About Educenter</h2>
         <p>We are group of Doctors who are associated together to bring in the best of clinical practice nearer to our patients at the best and affordable price. We partner with the best to dentists to ensure we provide the quality care across our centers..</p>
         <p>The Team of Doctors at Dental Connect has vast experience and are experts in their respective fields. We implement only research and clinical based techniques and have developed and perfected a system of care that provides long lasting, beautiful results.</p>
@@ -275,7 +274,7 @@
       </div>
       <br>
       <br>
-      <div class="col-md-6 order-2 order-md-2 mb-4 mb-md-0 upcoming_courses_div">
+      <div class="col-xl-6 order-2 order-md-2 mb-4 mb-md-0 upcoming_courses_div">
         <h2 class="section-title upcoming_courses">Upcoming Courses</h2>
         <div class="swiper-container1">
           <div class="swiper-wrapper">
@@ -679,8 +678,8 @@
           }
         </style>
         <!-- links -->
-        <div class="col-lg-4">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.672643924644!2d77.66530490789012!3d13.013670133087436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1127fca5dc63%3A0xeb44854b6076b9d3!2sMaruthi%20Complex!5e0!3m2!1sen!2sin!4v1581685663589!5m2!1sen!2sin"  width="500" height="300" frameborder="0" style="border:0; padding-top:30px;" allowfullscreen=""></iframe>
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.672643924644!2d77.66530490789012!3d13.013670133087436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1127fca5dc63%3A0xeb44854b6076b9d3!2sMaruthi%20Complex!5e0!3m2!1sen!2sin!4v1581685663589!5m2!1sen!2sin"  width="500" height="300" frameborder="0" style="border:0; padding-top:30px; width:inherit;" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
@@ -737,6 +736,10 @@
           slidesPerView: 2,
           spaceBetween: 50,
         },
+        1100:{
+          slidesPerView:2,
+          spaceBetween: 50,
+        }
       }
     });
   </script>
@@ -831,12 +834,13 @@ $('.thumb-prev').on('click', function() {
   
   </script>
 </footer>
+</div>
 <!-- /footer -->
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
+
 <!-- slick slider -->
 <script src="plugins/slick/slick.min.js"></script>
 <!-- aos -->
