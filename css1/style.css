@@ -1,8 +1,12 @@
 .nav-item::before{
   bottom:-8px;
 }
+
+.row{
+  margin-left: 0px;
+}
 .container{
-  padding-right:15px;padding-left:15px;margin-right:0;margin-left:0
+  padding-right:0px;padding-left:0px;margin-right:0;margin-left:0
 }
 @media only screen and (min-width: 1281px) {
   
@@ -146,14 +150,14 @@
     .navbar-nav{
       background: transparent;
       width:-5%;
-      padding-top: 7px;
+      padding-top: 0px;
       padding-left: 0px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
   }
   .nav-item::before{
-    top:-30px;
+    top:55px;
   }
 }
 
