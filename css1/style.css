@@ -2,6 +2,10 @@
   bottom:-8px;
 }
 
+.navbar-brand{
+  height: 100px;
+}
+
 .row{
   margin-left: 0px;
 }
@@ -70,9 +74,15 @@
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   
   .container{
-    width: 590px !important;
+    width: 614px !important;
   }
   
+}
+footer{
+  color:#a5a5d5;
+}
+.text-color{
+  color:#a5a5d5;
 }
 
 
@@ -111,13 +121,20 @@
     background: #41a42e;
   }
 
+  .nav-item:hover::before, .nav-item.active::before {
+    bottom:-10px;
+  }
 
-  
+  .nav-item::before{
+    height: 3px;
+    transition: none;
+
+  }
   .btn-primary:hover{
     color:#41a42e;
     background-color: #41a42e;
   }
-  body > header > div.navigation.w-100 > div > nav > a > img{
+  #main_container > header > div.navigation.w-100 > div > nav > a > img{
     height: 110px;
   }
   .navbar-nav{
@@ -144,7 +161,7 @@
   }
 
   @media(max-width: 1199px){
-    body > header > div.navigation.w-100 > div > nav > a > img{
+    #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
     }
     .navbar-nav{
@@ -162,7 +179,7 @@
 }
 
 @media(max-width: 985px){
-  body > header > div.navigation.w-100 > div > nav > a > img{
+  #main_container > header > div.navigation.w-100 > div > nav > a > img{
       
       position: absolute;
   top: -3px;
@@ -178,7 +195,7 @@
   }
 }
 @media (max-width: 760px){
-  body > header > div.navigation.w-100 > div > nav > a > img{
+  #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
     }
     .navbar-nav{
@@ -192,7 +209,7 @@
 
 }
 @media (max-width: 570px){
-  body > header > div.navigation.w-100 > div > nav > a > img{
+  #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
     }
     .navbar-nav{
