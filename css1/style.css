@@ -78,6 +78,13 @@
   }
   
 }
+#main_container > header > div.navigation.w-100 > div > nav > button{
+  padding-bottom: 45px;
+}
+
+.text-primary{
+  color:#41a42e!important;
+}
 footer{
   color:#a5a5d5;
 }
@@ -144,7 +151,7 @@ footer{
         padding-left: 30px;
   }
   .navigation{
-    background-image: linear-gradient(to right, transparent 68%, #41a42e 50%);
+    background-image: linear-gradient(to right, transparent 75%, #41a42e 50%);
   }
 
   .newsletter{

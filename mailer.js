@@ -51,16 +51,16 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     
     auth: {
-      user: 'aditya.tedroox@gmail.com',
-      pass: 'tedroox123'
+      user: 'dentalconnectacademy@gmail.com',
+      pass: 'Salil@1507'
     }
   });
   
   var mailOptions = {
-    from: 'aditya.tedroox@gmail.com',
+    from: 'dentalconnectacademy@gmail.com',
     to: req.body.email,
     subject: 'contact us',
-    html: '<p>thank you '+req.body.name+' for concting dental academy, we will get back to you on your query on '+req.body.phone+'</p>'
+    html: '<p>thank you '+req.body.name+' for contacting dental academy, we will get back to you on your query on '+req.body.phone+'</p>'
   };
   
   transporter.sendMail(mailOptions, function(error, info){

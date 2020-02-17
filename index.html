@@ -1,7 +1,11 @@
+
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
+  
   <meta charset="utf-8">
   <title>Educenter</title>
 
@@ -54,7 +58,7 @@
 </head>
 
 <body>
-  <form>
+ 
   
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
@@ -63,16 +67,18 @@
             <h4 class="justify-content-center" id="exampleModalLabel">Booking Form</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             
+            
           </div>
           <div class="modal-body">
-            <form action="/thankyou" method="POST">
+            <form class="form12" action="send_form_email.php" method="POST" id="home-page-pop-up-form">
               <div class="form-group">
                 <label for="recipient-name" class="control-label">Name</label>
-                <input type="text" class="form-control" id="recipient-name" required>
+                <input type="text" class="form-control" id="recipient-name" name="name" required>
               </div>
+              
               <div class="form-group">
                 <label for="recipient-name" class="control-label">Email</label>
-                <input type="email" class="form-control" id="recipient-name" required>
+                <input type="email" class="form-control" id="recipient-name" name="email" required>
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="control-label">Phone Number</label>
@@ -80,15 +86,18 @@
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="control-label">Qualification</label>
-                <input type="text" class="form-control" id="recipient-name" required>
+                <input type="text" class="form-control" id="recipient-name" name="Qualification" required>
               </div>
               
             </form>
           </div>
           <div class="modal-footer">
             
-            <button type="button" class="btn btn-primary">Send</button>
+            <a  href="./send_form_email.php"><button type="button" id="email" name="email" class="btn btn-primary">Submit</button></a>
           </div>
+          <div class="col-lg-5 col-12 col-sm-6">
+            <div class="message-popup-content__img message-popup-content__img--three"></div>
+        </div>
         </div>
       </div>
     </div>
@@ -102,12 +111,12 @@
 
     <script type="text/javascript">
       $(document).ready(function(){
-        console.log('hi')
+        
         if(sessionStorage.getItem("#myModal") !=='true')
         {
          
           $("#myModal").modal("show");
-          console.log('hi')
+          
           sessionStorage.setItem('#myModal' ,'true');
   
   }
@@ -115,7 +124,7 @@
   
   
     </Script>
-    </form>
+    
   <!-- preloader start -->
   <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
@@ -168,7 +177,7 @@
   ">
         <a class="navbar-brand" href="index.html"><img src="images/Logo 2.svg" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation"  style=""aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -292,11 +301,12 @@
                   <p class="card-text mb-4"> 
                     ● Clinical Cases (Live Surgery)<br>
                     ● Exdontia, Minor Oral Surgery and Emergencies</p>
-                  <a href="course-single1.html" class="btn btn-primary btn-sm" >Apply now</a>
+                  <a href="course-single1.html" class="btn btn-primary btn-sm"  >Apply now</a>
                 </div>
               </div>
             </div>
             
+
             <!-- course item -->
               <div class="swiper-slide slide-style"style="width: 300px;margin-right: 10px;">
               <div class="card p-0 border-primary rounded-0 hover-shadow"  style="width: 300px;">
@@ -314,7 +324,7 @@
                     ● Laminates Veneer<br>
                     ● Bleaching<br>
                     ● Laser Applications</p>
-                  <a href="course-single2.html" class="btn btn-primary btn-sm">Apply now</a>
+                  <a href="course-single2.html" class="btn btn-primary btn-sm" id="">Apply now</a>
                 </div>
               </div>
             </div>
@@ -361,7 +371,7 @@
           ● Exdontia, Minor Oral Surgery and Emergencies</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" id="oral_surgery" onclick="buttonclick()"   data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single1.html" class="btn btn-primary btn-sm">Know More</a>
@@ -371,6 +381,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function buttonclick(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','oral_surgery1')
+
+    }
+
+    
+    
+  </script>
   
   <!-- course item -->
     <div class="swiper-slide">
@@ -393,7 +414,7 @@
           ● Laser Applications</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#myModal">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm"  data-toggle="modal" onclick="basic_dental_asthetic()"data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single2.html" class="btn btn-primary btn-sm">Know More</a>
@@ -403,6 +424,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function basic_dental_asthetic(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','basic_dental_asthethic')
+
+    }
+
+    
+    
+  </script>
   <!-- course item -->
   <div class="swiper-slide">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -424,7 +456,7 @@
           </p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="complete_denture_prosthodontics()"data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single3.html" class="btn btn-primary btn-sm">Know More</a>
@@ -434,6 +466,17 @@
       </div>
     </div>
     </div>
+    <script>
+    
+      function complete_denture_prosthodontics(){
+        console.log('buttonclick')
+        document.querySelector('.form12').setAttribute('id','complete_denture_prosthodontics')
+  
+      }
+  
+      
+      
+    </script>
   
   <!-- course item -->
   <div class="swiper-slide">
@@ -452,7 +495,7 @@
         <p class="card-text mb-4"> EXTENSIVE PROGRAM IN ENDODONTICS INCLUDING MULTIPLE PATIENTS</p>
         <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="extensive_program_endodontics()"data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single4.html" class="btn btn-primary btn-sm">Know More</a>
@@ -462,6 +505,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function extensive_program_endodontics(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','extensive_program_endodontics')
+
+    }
+
+    
+    
+  </script>
   <!-- course item -->
   <div class="swiper-slide">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -483,7 +537,7 @@
           • Manage complications</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="general_dentistry_course()"data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single5.html" class="btn btn-primary btn-sm">Know More</a>
@@ -493,6 +547,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function general_dentistry_course(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','general_dentistry_course')
+
+    }
+
+    
+    
+  </script>
   <!-- course item -->
   <div class="swiper-slide">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -511,7 +576,7 @@
           Designed to expand the participant’s knowledge and confidence in Dental practice in following areas</p>
           <div class="row">
             <div class="col-sm-6" style="width: 50%;">
-             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+             <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="dental_practice_bootcamp()"data-target="#myModal">Apply now</a>
             </div>
             <div class="col-sm-6" style="width: 50%;">
              <a href="course-single6.html" class="btn btn-primary btn-sm">Know More</a>
@@ -522,6 +587,17 @@
     </div>
   
 </div>
+<script>
+    
+  function dental_practice_bootcamp(){
+    console.log('buttonclick')
+    document.querySelector('.form12').setAttribute('id','dental_practice_bootcamp')
+
+  }
+
+  
+  
+</script>
 <!-- /course list -->
     <!-- course list -->
 
@@ -545,7 +621,7 @@
          </p>
          <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="laser_dentistry_basics()"data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single7.html" class="btn btn-primary btn-sm">Know More</a>
@@ -555,6 +631,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function laser_dentistry_basics(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','laser_dentistry_basics')
+  
+    }
+  
+    
+    
+  </script>
   <!-- course item -->
   <div class="swiper-slide">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -573,7 +660,7 @@
           ● To optimize usage of Prosthetic options of the particular company
          <div class="row">
            <div class="col-sm-6" style="width: 50%;">
-            <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+            <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="comprehensive_implantology()"data-target="#myModal">Apply now</a>
            </div>
            <div class="col-sm-6" style="width: 50%;">
             <a href="course-single8.html" class="btn btn-primary btn-sm">Know More</a>
@@ -584,6 +671,17 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    function comprehensive_implantology(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','comprehensive_implantology')
+  
+    }
+  
+    
+    
+  </script>
   <!-- course item -->
   <div class="swiper-slide">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -602,7 +700,7 @@
         <p class="card-text mb-4"> Designed for General Practioners who have decided to incorporate endodontic in their treatment offering.</p>
         <div class="row">
           <div class="col-sm-6" style="width: 50%;">
-           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Apply now</a>
+           <a href="course-single8.html" class="btn btn-primary btn-sm" data-toggle="modal" onclick="six_days_endodontics_course()" data-target="#myModal">Apply now</a>
           </div>
           <div class="col-sm-6" style="width: 50%;">
            <a href="course-single9.html" class="btn btn-primary btn-sm">Know More</a>
@@ -614,6 +712,17 @@
   </div>
   </div>
   </div>
+  <script>
+    
+    function six_days_endodontics_course(){
+      console.log('buttonclick')
+      document.querySelector('.form12').setAttribute('id','six_days_endodontics_course')
+  
+    }
+  
+    
+    
+  </script>
 <!-- /course list -->
   
 
