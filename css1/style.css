@@ -1,3 +1,8 @@
+*body{
+  box-sizing: border-box;
+}
+
+
 .nav-item::before{
   bottom:-8px;
 }
@@ -98,7 +103,13 @@ footer{
 .nav-item::before{
   bottom:-25px;
 }
-
+.swiper-container {
+  width: 100%;
+  margin-top:85px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height:800px;
+}
 }
 
 @media only screen and (min-width:992px)
@@ -166,16 +177,33 @@ footer{
   .copyright{
     margin-top: 0px;
   }
+  .card{
+    margin: 20px 0 20px 0;
+  }
+  .carouselExampleIndicators{
+    height:inherit;
+  }
 
   @media(max-width: 1199px){
     #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height:800px;
+      margin-top: 1235px;
     }
     .navbar-nav{
       background: transparent;
       width:-5%;
       padding-top: 0px;
       padding-left: 0px;
+    }
+    .carousel-inner{
+      display:block;
+      height:1600px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -192,10 +220,21 @@ footer{
   top: -3px;
   height: 61px;
     }
+    .carousel-inner{
+      display:block;
+      height: 1330px;
+    }
     .navbar-nav{
       background: transparent;
       width:45%;
       padding-top: 17px;
+      margin-top:1110px;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height:800px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -204,11 +243,23 @@ footer{
 @media (max-width: 760px){
   #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
+
+    }
+    .carousel-inner{
+      display:block;
+      height: 900px;
     }
     .navbar-nav{
       background: transparent;
       width:45%;
       padding-top: 17px;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height:800px;
+      margin-top: 700px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -219,10 +270,22 @@ footer{
   #main_container > header > div.navigation.w-100 > div > nav > a > img{
       height: 60px;
     }
+    .carouselExampleIndicators{
+      height: 802px;
+    }
+    .carousel-inner{
+      display:block;
+    }
     .navbar-nav{
       background: transparent;
       width:45%;
       padding-top: 17px;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height:800px;
     }
     .navigation{
     background-image: linear-gradient(to right, transparent 60%, #41a42e 50%);
@@ -237,9 +300,11 @@ footer{
   width:3%;
 }
 .about_us{
-  height: 715px;
+  height: 900px;
 }
-
+.col-xl-6{
+  height:inherit;
+}
 
 .upcoming_courses_div{
   bottom: 71px;
@@ -248,8 +313,11 @@ footer{
   .upcoming_courses{
     padding-top: 0px;
   }
+  .col-xl-6{
+    height:500px;
+  }
   .upcoming_courses_div{
-    padding-top:90px;
+    padding-top:150px;
     padding-bottom:45px;
   }
   
@@ -260,7 +328,9 @@ footer{
 
 @media(max-width: 985px){
   .upcoming_courses_div{
+    padding-top:170px;
     padding-bottom: 125px;
+    margin-top:100px;
   }
 }
 @media (max-width: 760px){
