@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = " dentalconnectacademy@gmail.com";
+    $email_to = " aditya.tedroox@gmail.com";
     $email_subject = "course booking";
 
     $first_name = $_POST['name']; // required

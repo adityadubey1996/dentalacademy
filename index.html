@@ -7,7 +7,7 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Educenter</title>
+  <title>dentalconnectacademy</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +59,7 @@
 
 <body>
  
-  
+  <form method="POST" class="form12" action="send_form_email1.php"  id="home-page-pop-up-form">
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -70,7 +70,7 @@
             
           </div>
           <div class="modal-body">
-            <form class="form12" action="send_form_email.php" method="POST" id="home-page-pop-up-form">
+            
               <div class="form-group">
                 <label for="recipient-name" class="control-label">Name</label>
                 <input type="text" class="form-control" id="recipient-name" name="name" required>
@@ -88,19 +88,40 @@
                 <label for="recipient-name" class="control-label">Qualification</label>
                 <input type="text" class="form-control" id="recipient-name" name="Qualification" required>
               </div>
+              <div class="form-group">
+                <label for="form_need">Please specify your Course</label>
+                <select id="form_need" name="course_name" class="form-control" required="required" data-error="Please specify your need.">
+                  <option value=""></option>
+                  <option value="oral surgery">oral surgery</option>
+                  <option value="Basic Dental Asthetic">Basic Dental Asthetic</option>
+                  <option value="Complete Dental Prosthodontics">Complete Dental Prosthodontics</option>
+                  <option value="Mastering Endodontic">Mastering Endodontic</option>
+                  <option value="Mastering Endodontic">General Dentistry Course</option>
+                  <option value="Dental Practce Management Boot Camp">Dental Practce Management Boot Camp</option>
+                  <option value="Laser Dentistryt Basics">Laser Dentistryt Basics</option>
+                  <option value="Comprehensive Implantology">Comprehensive Implantology</option>
+                  <option value="Six days Endodontic Mini Residency Program">Six days Endodontic Mini Residency Program</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">City</label>
+                <input type="text" class="form-control" id="recipient-name" name="City" required>
+              </div>
               
-            </form>
+            
           </div>
+              
           <div class="modal-footer">
             
-            <a  href="./send_form_email.php"><button type="button" id="email" name="email" class="btn btn-primary">Submit</button></a>
-          </div>
-          <div class="col-lg-5 col-12 col-sm-6">
-            <div class="message-popup-content__img message-popup-content__img--three"></div>
+            <button  type="submit" id="email" name="Submit" value="Submit" class="btn btn-primary">Submit</button>
+            </div>
+              <div class="col-lg-5 col-12 col-sm-6">
+              <div class="message-popup-content__img message-popup-content__img--three"></div>
         </div>
         </div>
       </div>
     </div>
+    </form>
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
